@@ -6,11 +6,13 @@
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/24 13:08:03 by hmickey           #+#    #+#             */
-/*   Updated: 2021/05/24 14:46:37 by hmickey          ###   ########.fr       */
+/*   Updated: 2021/05/24 15:20:00 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Pony.hpp"
+
+int Pony::counter = 0;
 
 Pony::Pony( void ){
 	Pony::counter++;
