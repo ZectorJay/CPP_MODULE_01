@@ -1,30 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/24 13:05:31 by hmickey           #+#    #+#             */
-/*   Updated: 2021/05/24 16:19:20 by hmickey          ###   ########.fr       */
+/*   Created: 2021/05/29 09:59:40 by hmickey           #+#    #+#             */
+/*   Updated: 2021/05/29 12:56:13 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
+#include "Human.hpp"
 
-#include <iostream>
-
-class Pony{
-
-public:
-
-	static int	counter;
-	int			num;
-
-	Pony( void );
-	~Pony( void );
-	void call_rainbow( void ) const;
-};
-
-#endif
+int main()
+{
+	Human bob;
+	std::cout << bob.identify() << std::endl;
+	std::cout << bob.getBrain().identify() << std::endl;
+}

@@ -6,17 +6,17 @@
 #    By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/03 15:52:53 by hmickey           #+#    #+#              #
-#    Updated: 2021/05/24 16:26:02 by hmickey          ###   ########.fr        #
+#    Updated: 2021/05/28 04:37:31 by hmickey          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	MemoryLeak
+NAME		=	Zombie
 
-SRCS		=	MemoryLeak.cpp
+SRCS		=	Zombie.cpp ZombieHorde.methods.cpp main.cpp
 
 OBJS		= ${SRCS:.cpp=.o}
 
-INCLUDE		=	
+INCLUDE		=	Zombie.class.hpp ZombieEvent.class.hpp
 
 CC			= clang++
 
@@ -27,7 +27,7 @@ CPPFLAGS		= -Wall -Wextra -Werror
 .PHONY:			all clean fclean re
 
 $(NAME):		${OBJS}
-				${CC} ${OBJS} -o $(NAME)
+				${CC} -I. ${OBJS} -o $(NAME)
 
 all:			${NAME}
 

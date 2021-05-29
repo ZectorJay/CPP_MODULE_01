@@ -6,17 +6,17 @@
 #    By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/11/03 15:52:53 by hmickey           #+#    #+#              #
-#    Updated: 2021/05/24 16:26:02 by hmickey          ###   ########.fr        #
+#    Updated: 2021/05/29 13:08:02 by hmickey          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		=	MemoryLeak
+NAME		=	a.out
 
-SRCS		=	MemoryLeak.cpp
+SRCS		=	Weapon.cpp main.cpp
 
 OBJS		= ${SRCS:.cpp=.o}
 
-INCLUDE		=	
+INCLUDE		=	Human.hpp Brain.hpp
 
 CC			= clang++
 
@@ -27,7 +27,7 @@ CPPFLAGS		= -Wall -Wextra -Werror
 .PHONY:			all clean fclean re
 
 $(NAME):		${OBJS}
-				${CC} ${OBJS} -o $(NAME)
+				${CC} -I. ${OBJS} -o $(NAME)
 
 all:			${NAME}
 

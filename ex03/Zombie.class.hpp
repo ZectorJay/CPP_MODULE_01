@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   Zombie.class.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/24 13:05:31 by hmickey           #+#    #+#             */
-/*   Updated: 2021/05/24 16:19:20 by hmickey          ###   ########.fr       */
+/*   Created: 2021/05/24 16:36:24 by hmickey           #+#    #+#             */
+/*   Updated: 2021/05/29 07:59:29 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
-
+#ifndef ZOMBIE_CLASS_HPP
+# define ZOMBIE_CLASS_HPP
 #include <iostream>
+#include <sys/time.h>
 
-class Pony{
-
+class Zombie{
+	
 public:
+	
+	Zombie();
+	Zombie(	std::string name, std::string type );
+	~Zombie();
+	void	announce( void ) const;
+	void	set_type( std::string type );
+	void	set_name ( std::string name );
 
-	static int	counter;
-	int			num;
-
-	Pony( void );
-	~Pony( void );
-	void call_rainbow( void ) const;
+private:
+	
+	std::string _name;
+	std::string _type;
 };
 
 #endif

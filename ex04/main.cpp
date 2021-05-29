@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/24 13:05:31 by hmickey           #+#    #+#             */
-/*   Updated: 2021/05/24 16:19:20 by hmickey          ###   ########.fr       */
+/*   Created: 2021/05/29 09:16:32 by hmickey           #+#    #+#             */
+/*   Updated: 2021/05/29 09:24:03 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
-
 #include <iostream>
 
-class Pony{
+int main(){
+	std::string	brain = "HI THIS IS BRAIN";
+	std::string *brainp = &brain;
+	std::string &brainr = brain;
 
-public:
-
-	static int	counter;
-	int			num;
-
-	Pony( void );
-	~Pony( void );
-	void call_rainbow( void ) const;
-};
-
-#endif
+	std::cout<<"\033[1;38;2;200;0;0mLOOK, THIS IS POINTER - \033[0m";
+	std::cout<<*brainp<<std::endl;
+	std::cout<<"\033[1;38;2;0;200;0mLOOK, THIS IS REFERENCE - \033[0m";
+	std::cout<<brainr<<std::endl;
+}

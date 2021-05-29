@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/24 13:05:31 by hmickey           #+#    #+#             */
-/*   Updated: 2021/05/24 16:19:20 by hmickey          ###   ########.fr       */
+/*   Created: 2021/05/29 09:36:14 by hmickey           #+#    #+#             */
+/*   Updated: 2021/05/29 11:45:13 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
-
+#include "Brain.hpp"
 #include <iostream>
 
-class Pony{
+Brain::Brain(){}
 
-public:
+Brain::~Brain(){}
 
-	static int	counter;
-	int			num;
-
-	Pony( void );
-	~Pony( void );
-	void call_rainbow( void ) const;
-};
-
-#endif
+std::string Brain::identify( void ) const {
+	std::stringstream address;
+	address << this;
+	return (address.str());
+}

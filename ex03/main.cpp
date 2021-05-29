@@ -1,30 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/24 13:05:31 by hmickey           #+#    #+#             */
-/*   Updated: 2021/05/24 16:19:20 by hmickey          ###   ########.fr       */
+/*   Created: 2021/05/24 17:12:45 by hmickey           #+#    #+#             */
+/*   Updated: 2021/05/29 08:28:19 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
-
+#include "ZombieHorde.class.hpp"
 #include <iostream>
 
-class Pony{
+void	ZombieInit( void ){
+	ZombieHorde horde(5);
+	horde.announce();
+	return ;
+}
 
-public:
-
-	static int	counter;
-	int			num;
-
-	Pony( void );
-	~Pony( void );
-	void call_rainbow( void ) const;
-};
-
-#endif
+int main(){
+	ZombieInit();
+	while (1){}
+	return (0);
+}

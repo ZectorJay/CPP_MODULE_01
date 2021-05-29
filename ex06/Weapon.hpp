@@ -1,30 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Pony.hpp                                           :+:      :+:    :+:   */
+/*   Weapon.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmickey <hmickey@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/24 13:05:31 by hmickey           #+#    #+#             */
-/*   Updated: 2021/05/24 16:19:20 by hmickey          ###   ########.fr       */
+/*   Created: 2021/05/29 12:57:29 by hmickey           #+#    #+#             */
+/*   Updated: 2021/05/29 13:11:16 by hmickey          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PONY_HPP
-# define PONY_HPP
-
+#ifndef WEAPON_HPP
+# define WEAPON_HPP
 #include <iostream>
 
-class Pony{
+class Weapon{
 
 public:
+	
 
-	static int	counter;
-	int			num;
+	Weapon();
+	~Weapon();
 
-	Pony( void );
-	~Pony( void );
-	void call_rainbow( void ) const;
+	const std::string & getType ( void );
+	void	setType ( std::string str);
+
+private:
+
+	std::string _type;
+
 };
+
 
 #endif
